@@ -1,20 +1,21 @@
-import Home from './components/pages/home/home';
+import Home from "./components/pages/home/home";
 import Sidebar from "./components/sidebar/sidebar";
 import Topbar from "./components/topbar/Topbar";
-import WidgetSm from './components/widgetSm/widgetSm';
-import WidgetLg from './components/widgetLg/widgetLg';
 import "./App.css";
-
+import UserList from "./components/pages/userList/userList";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <Topbar />
       <div className="container">
         <Sidebar />
-        <Home />
-       
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/users" element={<UserList />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
