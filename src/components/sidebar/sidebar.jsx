@@ -1,11 +1,16 @@
 import "./sidebar.css";
+import { Link } from "react-router-dom";
 import {
   LineStyle,
   Timeline,
   TrendingUp,
   Person,
   Category,
-  Receipt, Flag, Mail, Feedback, Message
+  Receipt,
+  Flag,
+  Mail,
+  Feedback,
+  Message,
 } from "@material-ui/icons";
 
 export default function sidebar() {
@@ -15,10 +20,13 @@ export default function sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem">
+                <LineStyle className="sidebarIcon" />
+                Home
+              </li>
+            </Link>
+
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
@@ -32,14 +40,20 @@ export default function sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <Person className="sidebarIcon" />
-              Users
-            </li>
-            <li className="sidebarListItem">
-              <Category className="sidebarIcon" />
-              Products
-            </li>
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <Person className="sidebarIcon" />
+                Users
+              </li>
+            </Link>
+
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Category className="sidebarIcon" />
+                Products
+              </li>
+            </Link>
+
             <li className="sidebarListItem">
               <Receipt className="sidebarIcon" />
               Transactions

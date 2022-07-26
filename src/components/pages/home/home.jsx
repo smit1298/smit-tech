@@ -1,4 +1,4 @@
-import FeaturedInfo from "../../fFeaturedInfo/FeaturedInfo";
+import FeaturedInfo from "../../featuredInfo/FeaturedInfo";
 import Chart from "../../chart/chart";
 import "./home.css";
 import { userData } from "../../../dummyData";
